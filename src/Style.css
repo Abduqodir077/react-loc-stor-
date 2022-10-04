@@ -1,0 +1,47 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div{
+    width: 52%;
+    border: 1px solid black;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+p{
+    padding: 10px;
+    font-weight: 800;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+button{
+    width: 100%;
+    margin: 10px;
+    padding: 5px;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+input{
+    margin: 5px;
+}
+
+img{
+    width: 400px;
+    height: 400px;
+}
+
