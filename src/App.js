@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import "./Style.css";
+import del from "./img/delete.png";
+import edit from "./img/edit.png";
+import done from "./img/done.png"
 
 function App() {
 
-    let [test, setTest] = useState("")
+  let [test, setTest] = useState("")
 
   let [malumot, setMalumot] = useState({
     familiya: "",
@@ -82,6 +85,7 @@ function App() {
 
   return (
     <>
+      <div className="div1">
       <form action="" onSubmit={send}>
         <input
           type="text"
@@ -104,22 +108,26 @@ function App() {
           placeholder="malumot kiriting"
           value={malumot.yosh}
         />
-        <input type="file" onChange={rasmChange} />
+        <input type="file" onChange={rasmChange} /><br />
+        <img src={done} alt="done" />
         <button>jo'nat</button>
       </form>
+      </div>
 
-      {localData.map((item, index) => {
+      {
+      localData.map((item, index) => {
         return (
-          <div key={index}>
-            <p>{item.familiya}</p>
-            <p>{item.ism}</p>
-            <p>{item.yosh}</p>
-            <img src={item.rasm} alt="yoq" /><br />
-            <button onClick={() => del(item)} >delete</button>
-        <button onClick={() => edit(item,index)} >edit</button>
+          <div className="div2" key={index}>
+               <p>{item.familiya}</p>
+               <p>{item.ism}</p>
+               <p>{item.yosh}</p>
+               <img src={item.rasm} alt="rasm" /><br />
+               <button onClick={() => del(item)} >delete</button>
+               <button onClick={() => edit(item,index)} >edit</button>
           </div>
         );
-      })}
+      })
+      }
     </>
   );
 }
